@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "874225077500",
+    "firebase_url": "https://talker-760e8.firebaseio.com",
+    "project_id": "talker-760e8",
+    "storage_bucket": "talker-760e8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874225077500:android:53bbb16663429a50cd1b79",
+        "android_client_info": {
+          "package_name": "com.github.kosher9.talker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874225077500-s19f330le3gnfrhnopu7kla924i7dcq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.github.kosher9.talker",
+            "certificate_hash": "1657c1c494e805bd7d2f37fbeb8df2d5e4a829dc"
+          }
+        },
+        {
+          "client_id": "874225077500-c0vv0lieev5easr6tp0p8j48f2t6be1l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC2zdOW2MSB_p5TcbUSjzpcNGjhY9ve0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874225077500-c0vv0lieev5easr6tp0p8j48f2t6be1l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

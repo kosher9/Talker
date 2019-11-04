@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Talker</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="code_pays">
+        <item>+228</item>
+        <item>+229</item>
+    </string-array>
 </resources>
