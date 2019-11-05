@@ -45,7 +45,7 @@ class ContactsFragment : Fragment() {
 
         reference.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {
-                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                    return
             }
 
             override fun onDataChange(dataSnapshot: DataSnapshot) {
