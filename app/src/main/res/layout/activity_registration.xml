@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Registration"
-    android:background="#F7F6FC">
+    android:background="#F1EEF5">
 
     <include
         android:id="@+id/toolbar"
@@ -40,7 +40,8 @@
             android:layout_marginBottom="20dp"
             android:text="Registration"
             android:textSize="17sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:textColor="#181818"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,7 +55,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="8dp"
-        android:textColor="#1F1E1E"
+        android:textColor="#181818"
         app:layout_constraintBottom_toBottomOf="@id/edit_num"
         app:layout_constraintEnd_toStartOf="@id/edit_num"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +73,7 @@
         android:paddingStart="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintHorizontal_bias="0.692"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintVertical_bias="0.039" />
@@ -81,12 +82,12 @@
         android:id="@+id/button_valider"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginBottom="56dp"
         android:background="@drawable/background_button_valider"
         android:text="Valider"
         android:textColor="#ffff"
-        app:layout_constraintEnd_toEndOf="@+id/edit_num"
-        app:layout_constraintHorizontal_bias="0.51"
-        app:layout_constraintStart_toStartOf="@+id/edit_num"
-        app:layout_constraintTop_toBottomOf="@id/edit_num" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,11 +23,10 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_medium"
                 android:text="Talker"
+                android:textSize="18sp"
                 android:textColor="@android:color/white"
                 android:layout_marginStart="25dp"/>
         </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
@@ -36,7 +35,9 @@
         android:background="@color/colorPrimaryDark"
         app:tabSelectedTextColor="@android:color/white"
         app:tabIndicator="@android:color/white"
-        app:tabTextColor="#B1B0B0"/>
+        app:tabTextColor="#AEFFFFFF"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"

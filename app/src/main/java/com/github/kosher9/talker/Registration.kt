@@ -24,8 +24,8 @@ class Registration : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar!!.title = "Code Check"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.title = "Registration"
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         codeSpinner = findViewById(R.id.cpp)
         numText = findViewById(R.id.edit_num)
@@ -43,14 +43,14 @@ class Registration : AppCompatActivity() {
 
 
         validerButton.setOnClickListener {
-            val sp = codeSpinner.selectedItem.toString()
+            /*val sp = codeSpinner.selectedItem.toString()
             val nut = numText.text.toString()
 
             val num = "$sp$nut"
             Log.i("RegistrationActivity", "sp : $sp , nut :$nut , num : $num")
-            Toast.makeText(this, "$num", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "$num", Toast.LENGTH_SHORT).show()*/
             val intent = Intent(this, CodeCheck::class.java)
-            intent.putExtra("numTel", num)
+//            intent.putExtra("numTel", num)
             startActivity(intent)
         }
 

@@ -39,16 +39,18 @@ class CodeCheck : AppCompatActivity() {
         valiButton = findViewById(R.id.button_valider)
 
         mAuth = FirebaseAuth.getInstance()
-        val numTel = intent.getStringExtra("numTel")
-        sendVerification(numTel)
+//        val numTel = intent.getStringExtra("numTel")
+//        sendVerification(numTel)
 
         valiButton.setOnClickListener {
-            if (codeEdit.text.isEmpty() || codeEdit.text.length < 6){
+           /* if (codeEdit.text.isEmpty() || codeEdit.text.length < 6){
                 codeEdit.error = "Enter code"
                 codeEdit.requestFocus()
                 return@setOnClickListener
             }
-            verifyCode(codeEdit.text.toString())
+            verifyCode(codeEdit.text.toString())*/
+            val intent = Intent(this, UserPersInfoActivity::class.java)
+            startActivity(intent)
         }
 
     }
@@ -104,5 +106,4 @@ class CodeCheck : AppCompatActivity() {
             }
         }
     }
-
 }

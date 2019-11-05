@@ -11,7 +11,11 @@ class LaunchActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_launch)
 
-        if(FirebaseAuth.getInstance().currentUser != null){
+        val intent = Intent(this, Registration::class.java)
+        startActivity(intent)
+        finish()
+
+        /*if(FirebaseAuth.getInstance().currentUser != null){
             val intent = Intent(this, MainActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
@@ -20,7 +24,7 @@ class LaunchActivity : AppCompatActivity() {
             val intent = Intent(this, Registration::class.java)
             startActivity(intent)
             finish()
-        }
+        }*/
 
     }
 }
