@@ -22,4 +22,15 @@
         android:layout_centerVertical="true"
         android:textSize="18sp"/>
 
+    <!--<TextView
+        android:id="@+id/last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/username"
+        android:layout_toRightOf="@id/profile_image"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:maxLines="1"/>-->
+
 </RelativeLayout>

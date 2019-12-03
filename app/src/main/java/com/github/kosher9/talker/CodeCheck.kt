@@ -1,5 +1,6 @@
 package com.github.kosher9.talker
 
+import android.app.ProgressDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -25,6 +26,7 @@ class CodeCheck : AppCompatActivity() {
     private lateinit var mAuth: FirebaseAuth
     private lateinit var codeEdit: EditText
     private lateinit var valiButton: Button
+    private lateinit var num: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,26 +41,30 @@ class CodeCheck : AppCompatActivity() {
         valiButton = findViewById(R.id.button_valider)
 
         mAuth = FirebaseAuth.getInstance()
-//        val numTel = intent.getStringExtra("numTel")
-//        sendVerification(numTel)
+        num = intent.getStringExtra("numTel")
+        sendVerification(num)
 
         valiButton.setOnClickListener {
-           /* if (codeEdit.text.isEmpty() || codeEdit.text.length < 6){
+            if (codeEdit.text.isEmpty() || codeEdit.text.length < 6){
                 codeEdit.error = "Enter code"
                 codeEdit.requestFocus()
                 return@setOnClickListener
             }
-            verifyCode(codeEdit.text.toString())*/
+            verifyCode(codeEdit.text.toString())
             val intent = Intent(this, UserPersInfoActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
+
 
     private val mCallBack = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks(){
 
         override fun onCodeSent(s: String, token: PhoneAuthProvider.ForceResendingToken) {
             super.onCodeSent(s, token)
+            val progressDialog = ProgressDialog(this@CodeCheck)
+            progressDialog.setTitle("Authentication")
             verificationCode = s
         }
 
@@ -99,6 +105,7 @@ class CodeCheck : AppCompatActivity() {
             if (it.isSuccessful){
                 val intent = Intent(this@CodeCheck, UserPersInfoActivity::class.java)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                intent.putExtra("numTel", num)
                 startActivity(intent)
                 finish()
             } else {

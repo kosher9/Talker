@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MessageActivity">
+    tools:context=".MessageActivity"
+    android:background="#EB12192C">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/bar_layout"
@@ -19,6 +20,10 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/MenuStyle">
 
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image_bar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
 
             <TextView
                 android:id="@+id/username"
@@ -26,6 +31,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:text="username"
+                android:textSize="18sp"
                 android:textColor="#fff"
                 android:textStyle="bold" />
 
@@ -34,7 +40,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+        android:id="@+id/recycler_view_chat"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/bar_layout"
@@ -46,7 +52,7 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:layout_alignParentBottom="true"
-        android:background="#fff">
+        android:background="#DFE2F7">
 
         <EditText
             android:id="@+id/text_send"
@@ -57,7 +63,8 @@
             android:layout_toStartOf="@id/btn_send"
             android:layout_centerVertical="true"
             android:inputType="textCapSentences|textAutoComplete|textMultiLine"
-            android:hint="Type message..."/>
+            android:hint="Type message..."
+            android:textColor="#272727"/>
 
         <ImageButton
             android:id="@+id/btn_send"

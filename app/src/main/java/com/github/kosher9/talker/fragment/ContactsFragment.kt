@@ -41,7 +41,7 @@ class ContactsFragment : Fragment() {
 
     private fun readContacts(){
         val firebaseUser = FirebaseAuth.getInstance().currentUser!!
-        val reference = FirebaseDatabase.getInstance().getReference("contacts")
+        val reference = FirebaseDatabase.getInstance().getReference("Users")
 
         reference.addValueEventListener(object : ValueEventListener{
             override fun onCancelled(p0: DatabaseError) {

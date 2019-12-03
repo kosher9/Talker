@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifUsernameActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_modif_profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/MenuStyle">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Profil"
+            android:textSize="16sp"
+            android:textColor="#fff"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Changer votre nom d'utilisateur..."
+        android:textSize="16sp"
+        android:layout_below="@id/toolbar_modif_profil"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"/>
+
+    <RelativeLayout
+        android:id="@+id/username_modif_rel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/toolbar_modif_profil"
+        android:layout_marginTop="70dp"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/ic_pers"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_person"
+            android:layout_toLeftOf="@id/username_p_modif"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"/>
+
+        <EditText
+            android:id="@+id/username_p_modif"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:paddingStart="5dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/background_edit_enum"
+            android:focusedByDefault="false"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/modif_valid_but"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_button_valider"
+        android:text="Valider"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="200dp"/>
+
+</RelativeLayout>

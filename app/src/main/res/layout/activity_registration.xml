@@ -46,7 +46,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter your mobile number, we will sent you a code..." />
+            android:text="Enter your mobile number, we will sent you a code..."
+            android:textColor="#181818"/>
     </LinearLayout>
 
     <Spinner

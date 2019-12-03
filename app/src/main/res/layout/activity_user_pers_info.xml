@@ -15,6 +15,7 @@
         android:id="@+id/imageView"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        app:civ_border_width="2dp"
         android:layout_marginTop="40dp"
         android:src="@drawable/add_user"
         app:layout_constraintEnd_toEndOf="parent"
